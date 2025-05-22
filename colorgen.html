@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            background-color: darkkhaki;
+            width:500px;
+            height:300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div> <br> <br>
+    <button id="colorgen">click me</button>
+
+    <script>
+        var main=document.querySelector("div");
+        var btn=document.getElementById("colorgen");
+        color=0;
+        btn.addEventListener("click", function(){
+            var arr= ["green", "blue", "red", "yellow", "pink", "orange", "teal", "brown", "black"];
+            main.style.backgroundColor=arr[color];
+            color++ ;
+            if(color>arr.length){
+                color=0;
+            }     
+        })
+    </script>
+</body>
+</html>
